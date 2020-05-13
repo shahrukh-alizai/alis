@@ -34,8 +34,8 @@ chmod +x alis-recovery-asciinema.sh
 chmod +x alis-recovery-reboot.sh
 
 # Configure pacman mirrors
-pacman -Syy
-pacman -Syu --noconfirm reflector
-cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
-reflector -c "US" -f 12 -l 10 -n 12 --protocol http --protocol ftp --save /etc/pacman.d/mirrorlist
+#pacman -Syy
+#pacman -Syu --noconfirm reflector
+#cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+#reflector -c "US" -f 12 -l 10 -n 12 --protocol http --protocol ftp --save /etc/pacman.d/mirrorlist
 
