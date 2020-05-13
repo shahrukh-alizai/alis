@@ -45,7 +45,7 @@ chmod +x alis-recovery-reboot.sh
 pacman -Syy
 pacman -S reflector
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
-reflector -c "US" -f 12 -l 10 -n 12 --protocol http --save /etc/pacman.d/mirrorlist
+reflector -c "US" -f 12 -l 10 -n 12 --protocol http --protocol ftp --save /etc/pacman.d/mirrorlist
 
 # Setting up proxy
 PROXY_ADDR="192.168.10.200:3128"
@@ -53,5 +53,5 @@ export HTTP_PROXY=http://$PROXY_ADDR/
 export http_proxy=http://$PROXY_ADDR/
 export HTTPS_PROXY=http://$PROXY_ADDR/
 export https_proxy=http://$PROXY_ADDR/
-export FTP_PROXY=http://$PROXY_ADDR/
-export ftp_proxy=http://$PROXY_ADDR/
+export FTP_PROXY=ftp://$PROXY_ADDR/
+export ftp_proxy=ftp://$PROXY_ADDR/
