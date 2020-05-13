@@ -1,14 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-# Remove proxy setting
-export HTTP_PROXY=
-export http_proxy=
-export HTTPS_PROXY=
-export https_proxy=
-export FTP_PROXY=
-export ftp_proxy=
-
 # Arch Linux Install Script (alis) installs unattended, automated
 # and customized Arch Linux system.
 # Copyright (C) 2018 picodotdev
@@ -47,9 +39,3 @@ pacman -S reflector
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 reflector -c "US" -f 12 -l 10 -n 12 --protocol http --protocol ftp --save /etc/pacman.d/mirrorlist
 
-# Setting up proxy
-PROXY_ADDR="192.168.10.200:3128"
-export HTTP_PROXY=http://$PROXY_ADDR/
-export http_proxy=http://$PROXY_ADDR/
-export FTP_PROXY=ftp://$PROXY_ADDR/
-export ftp_proxy=ftp://$PROXY_ADDR/
