@@ -33,4 +33,4 @@ chmod +x alis-recovery.sh
 chmod +x alis-recovery-asciinema.sh
 chmod +x alis-recovery-reboot.sh
 
-source ./alish.sh
+source ./alis.sh
